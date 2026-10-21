@@ -1,0 +1,18 @@
+// Daily/weekly snapshot export for the remediation metrics pipeline.
+// Run in Microsoft Defender Advanced Hunting (or Sentinel with the Defender XDR
+// connector), export to CSV, and save as snapshots/YYYY-MM-DD.csv.
+//
+// The second half emits one "heartbeat" row (empty CveId) for every device that
+// checked in recently, so devices with zero open vulnerabilities are not
+// mistaken for retired devices.
+let activeDevices = DeviceInfo
+    | where Timestamp > ago(7d)
+    | summarize arg_max(Timestamp, DeviceName, OSPlatform) by DeviceId;
+let vulns = DeviceTvmSoftwareVulnerabilities
+    | project DeviceId, DeviceName, OSPlatform, CveId, VulnerabilitySeverityLevel, SoftwareName;
+union
+    vulns,
+    (activeDevices
+     | project DeviceId, DeviceName, OSPlatform,
+               CveId = "", VulnerabilitySeverityLevel = "", SoftwareName = "")
+| project DeviceId, DeviceName, OSPlatform, CveId, VulnerabilitySeverityLevel, SoftwareName
