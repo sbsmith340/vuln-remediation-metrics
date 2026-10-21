@@ -1,0 +1,199 @@
+{
+  "as_of": "2026-09-28",
+  "sla_days": {
+    "Critical": 15,
+    "High": 30,
+    "Medium": 90,
+    "Low": 180
+  },
+  "totals": {
+    "findings": 1357,
+    "open": 463,
+    "remediated": 868,
+    "retired": 26
+  },
+  "by_severity": [
+    {
+      "severity": "Critical",
+      "sla_days": 15,
+      "remediated": 191,
+      "open": 2,
+      "overdue": 2,
+      "mttr_days": 11.5,
+      "median_days": 7.0,
+      "sla_compliance_pct": 88.1
+    },
+    {
+      "severity": "High",
+      "sla_days": 30,
+      "remediated": 355,
+      "open": 52,
+      "overdue": 19,
+      "mttr_days": 24.5,
+      "median_days": 21.0,
+      "sla_compliance_pct": 76.2
+    },
+    {
+      "severity": "Medium",
+      "sla_days": 90,
+      "remediated": 262,
+      "open": 233,
+      "overdue": 75,
+      "mttr_days": 55.7,
+      "median_days": 49.0,
+      "sla_compliance_pct": 68.5
+    },
+    {
+      "severity": "Low",
+      "sla_days": 180,
+      "remediated": 60,
+      "open": 176,
+      "overdue": 0,
+      "mttr_days": 86.3,
+      "median_days": 77.0,
+      "sla_compliance_pct": 100.0
+    }
+  ],
+  "open_aging": {
+    "0-15d": {
+      "Critical": 0,
+      "High": 26,
+      "Medium": 30,
+      "Low": 67
+    },
+    "16-30d": {
+      "Critical": 2,
+      "High": 7,
+      "Medium": 43,
+      "Low": 4
+    },
+    "31-60d": {
+      "Critical": 0,
+      "High": 8,
+      "Medium": 57,
+      "Low": 38
+    },
+    "61-90d": {
+      "Critical": 0,
+      "High": 8,
+      "Medium": 28,
+      "Low": 28
+    },
+    "90d+": {
+      "Critical": 0,
+      "High": 3,
+      "Medium": 75,
+      "Low": 39
+    }
+  },
+  "trend_crit_high": [
+    {
+      "month": "2026-04",
+      "remediated": 12,
+      "mttr_days": 11.7,
+      "sla_compliance_pct": 100.0
+    },
+    {
+      "month": "2026-05",
+      "remediated": 51,
+      "mttr_days": 18.8,
+      "sla_compliance_pct": 92.2
+    },
+    {
+      "month": "2026-06",
+      "remediated": 84,
+      "mttr_days": 17.2,
+      "sla_compliance_pct": 85.7
+    },
+    {
+      "month": "2026-07",
+      "remediated": 160,
+      "mttr_days": 18.4,
+      "sla_compliance_pct": 86.9
+    },
+    {
+      "month": "2026-08",
+      "remediated": 161,
+      "mttr_days": 22.7,
+      "sla_compliance_pct": 78.3
+    },
+    {
+      "month": "2026-09",
+      "remediated": 78,
+      "mttr_days": 22.4,
+      "sla_compliance_pct": 75.6
+    }
+  ],
+  "oldest_open_crit_high": [
+    {
+      "device": "CONTOSO-WKS-105",
+      "cve": "CVE-2026-1042",
+      "severity": "High",
+      "software": "7-zip",
+      "age_days": 105
+    },
+    {
+      "device": "CONTOSO-WKS-101",
+      "cve": "CVE-2026-1052",
+      "severity": "High",
+      "software": "office",
+      "age_days": 98
+    },
+    {
+      "device": "CONTOSO-WKS-113",
+      "cve": "CVE-2026-1052",
+      "severity": "High",
+      "software": "office",
+      "age_days": 98
+    },
+    {
+      "device": "CONTOSO-LNX-084",
+      "cve": "CVE-2026-1063",
+      "severity": "High",
+      "software": "sudo",
+      "age_days": 77
+    },
+    {
+      "device": "CONTOSO-SRV-042",
+      "cve": "CVE-2026-1071",
+      "severity": "High",
+      "software": "openssl",
+      "age_days": 70
+    },
+    {
+      "device": "CONTOSO-WKS-031",
+      "cve": "CVE-2026-1073",
+      "severity": "High",
+      "software": "chrome",
+      "age_days": 63
+    },
+    {
+      "device": "CONTOSO-WKS-036",
+      "cve": "CVE-2026-1073",
+      "severity": "High",
+      "software": "chrome",
+      "age_days": 63
+    },
+    {
+      "device": "CONTOSO-WKS-049",
+      "cve": "CVE-2026-1073",
+      "severity": "High",
+      "software": "chrome",
+      "age_days": 63
+    },
+    {
+      "device": "CONTOSO-WKS-065",
+      "cve": "CVE-2026-1073",
+      "severity": "High",
+      "software": "chrome",
+      "age_days": 63
+    },
+    {
+      "device": "CONTOSO-WKS-085",
+      "cve": "CVE-2026-1073",
+      "severity": "High",
+      "software": "chrome",
+      "age_days": 63
+    }
+  ]
+}
